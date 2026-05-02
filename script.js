@@ -73,5 +73,41 @@ document.addEventListener("DOMContentLoaded", () => {
     el.textContent = met ? textMet : textNot;
     el.classList.toggle("met", met);
   }
+
   
+  /* ────────────────────────────────────────────────
+     2. GENERADOR DE FRASE CLAVE
+  ──────────────────────────────────────────────── */
+  const WORDS = [
+    "Montaña","Tigre","Estrella","Dragón","Cohete","Planeta",
+    "Tormenta","Cristal","Bosque","Delfín","Aurora","Volcán",
+    "Galaxia","Relámpago","Cascada","Halcón","Océano","Cometa",
+    "Jungla","Pirámide","Nebulosa","Trueno","Laberinto","Fénix",
+  ];
+  const ADJECTIVES = [
+    "Veloz","Secreto","Digital","Invencible","Brillante","Oscuro",
+    "Cósmico","Silencioso","Furioso","Eterno","Invisible","Salvaje",
+  ];
+
+  const generateBtn    = document.getElementById("generatePhrase");
+  const generatedPhrase= document.getElementById("generatedPhrase");
+
+  if (generateBtn) {
+    generateBtn.addEventListener("click", () => {
+      const w1  = pick(WORDS);
+      const adj = pick(ADJECTIVES);
+      const w2  = pick(WORDS);
+      const num = Math.floor(Math.random() * 90) + 10;
+      const sym = pick(["!", "@", "#", "$", "&", "*"]);
+      const phrase = `${w1}${adj}${w2}${num}${sym}`;
+      generatedPhrase.textContent = phrase;
+      // reset animation
+      generatedPhrase.style.animation = "none";
+      requestAnimationFrame(() => { generatedPhrase.style.animation = ""; });
+    });
+  }
+
+  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+
 });
