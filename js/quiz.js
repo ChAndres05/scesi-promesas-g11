@@ -30,3 +30,21 @@ function checkFinal() {
     document.getElementById("final").textContent = message;
   }
 }
+
+function showScreen(id) {
+  document.getElementById("menu").style.display = "none";
+
+  document.querySelectorAll(".screen").forEach(sec => {
+    sec.style.display = "none";
+  });
+
+  document.getElementById(id).style.display = "block";
+}
+
+function goBack() {
+  document.querySelectorAll(".screen").forEach(sec => {
+    sec.style.display = "none";
+  });
+
+  document.getElementById("menu").style.display = "block";
+}

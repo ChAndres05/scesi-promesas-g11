@@ -9,8 +9,15 @@
 </head>
 
 <body>
+    <section id="menu">
+  <h1>Panel Principal</h1>
+
+  <button onclick="showScreen('web-security')">Seguridad Web</button>
+  <button onclick="showScreen('prevention')">Prevención</button>
+  <button onclick="showScreen('quiz')">Quiz</button>
+</section>
 <!--Mi persona 4-->>
-  <section id="web-security">
+  <section id="web-security" class="screen hidden">
     <h2>Seguridad Web</h2>
 
     <p><strong>HTTPS:</strong> Protege la información entre el usuario y el sitio.</p>
@@ -22,8 +29,9 @@
       <li>Enlaces sospechosos</li>
       <li>Descargas inseguras</li>
     </ul>
+    <button onclick="goBack()">⬅ Volver</button>
   </section>
-  <section id="prevention">
+  <section id="prevention" class="screen hidden">
     <h2>Prevención</h2>
     <ul>
       <li>No hacer clic en enlaces desconocidos</li>
@@ -31,10 +39,9 @@
       <li>Usar sitios con HTTPS</li>
       <li>Actualizar antivirus</li>
     </ul>
+    <button onclick="goBack()">Volver</button>
   </section>
-
-  <!-- 🧪 QUIZ -->
-  <section id="quiz">
+  <section id="quiz" class="screen hidden">
     <h2>Quiz de Ciberseguridad</h2>
 
     <p>1. ¿Qué significa HTTPS?</p>
@@ -51,6 +58,7 @@
 
     <h3 id="score">Puntaje: 0/3</h3>
     <p id="final"></p>
+    <button onclick="goBack()">Volver</button>
   </section>
 
   <script src="js/quiz.js"></script>
