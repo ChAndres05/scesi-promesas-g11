@@ -509,3 +509,88 @@ main, footer { position: relative; z-index: 1; }
   font-family: var(--font-mono);
 }
 .totp-note { font-size: 0.8rem; color: var(--text-muted); font-style: italic; }
+
+/* ================================================================
+   SECTION 03 — PRIVACIDAD
+   ================================================================ */
+.privacy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.privacy-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.4rem;
+  cursor: pointer;
+}
+.priv-icon { font-size: 2rem; margin-bottom: 0.2rem; }
+.privacy-card h4 { font-size: 0.95rem; font-weight: 700; }
+.privacy-card p { font-size: 0.85rem; color: var(--text-muted); flex: 1; }
+
+.tip-btn {
+  margin-top: 0.6rem;
+  background: none;
+  border: 1px solid rgba(56,242,175,0.25);
+  color: var(--primary);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  width: fit-content;
+  transition: background 0.2s;
+}
+.tip-btn:hover { background: rgba(56,242,175,0.1); }
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7,17,31,0.85);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-box {
+  background: var(--bg-card);
+  border: 1px solid rgba(56,242,175,0.25);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  max-width: 440px;
+  width: calc(100% - 2rem);
+  position: relative;
+  animation: modal-in 0.3s ease;
+}
+@keyframes modal-in {
+  from { transform: translateY(20px) scale(0.95); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border-soft);
+  color: var(--text-muted);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(255,100,100,0.15); color: var(--danger); }
+.modal-icon { font-size: 2.4rem; margin-bottom: 1rem; }
+.modal-text { color: var(--text-muted); font-size: 0.97rem; line-height: 1.7; }
