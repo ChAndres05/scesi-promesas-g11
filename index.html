@@ -117,5 +117,88 @@
       </div>
     </section>
 
+      <!-- 2FA -->
+    <section id="2fa" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">02</span>
+        <h2>Autenticación de <span class="accent">Dos Factores</span></h2>
+        <p class="section-desc">Agrega una segunda capa de seguridad más allá de tu contraseña.</p>
+      </div>
+
+      <div class="tfa-layout">
+        <div class="tfa-steps card">
+          <h3 class="card-title">¿Cómo funciona el 2FA?</h3>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <strong>Ingresas tu contraseña</strong>
+                <p>El primer factor: algo que <em>sabes</em>.</p>
+              </div>
+            </div>
+            <div class="step-arrow">↓</div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <strong>Verificación adicional</strong>
+                <p>El segundo factor: algo que <em>tienes</em> o <em>eres</em>.</p>
+              </div>
+            </div>
+            <div class="step-arrow">↓</div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <strong>Acceso concedido</strong>
+                <p>Solo tú puedes entrar, incluso si roban tu contraseña.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tfa-types">
+          <div class="tfa-card card">
+            <div class="tfa-icon">📱</div>
+            <h4>App Autenticadora</h4>
+            <p>Google Authenticator, Authy. Genera códigos cada 30 segundos.</p>
+            <span class="badge badge-best">MÁS SEGURO</span>
+          </div>
+          <div class="tfa-card card">
+            <div class="tfa-icon">📨</div>
+            <h4>SMS / Email</h4>
+            <p>Código enviado a tu teléfono o correo. Cómodo pero más vulnerable.</p>
+            <span class="badge badge-ok">ACEPTABLE</span>
+          </div>
+          <div class="tfa-card card">
+            <div class="tfa-icon">🔑</div>
+            <h4>Llave de Seguridad</h4>
+            <p>Hardware físico (YubiKey). La opción más robusta.</p>
+            <span class="badge badge-best">ELITE</span>
+          </div>
+          <div class="tfa-card card">
+            <div class="tfa-icon">🪪</div>
+            <h4>Biometría</h4>
+            <p>Huella dactilar, reconocimiento facial. Rápido y conveniente.</p>
+            <span class="badge badge-ok">BUENO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tfa-demo card">
+        <h3 class="card-title">Simulador de Código 2FA</h3>
+        <p>Así se ve un código TOTP en tiempo real:</p>
+        <div class="totp-display">
+          <div class="totp-code" id="totpCode">------</div>
+          <div class="totp-timer">
+            <svg viewBox="0 0 36 36" class="timer-circle">
+              <path class="timer-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="timer-arc" id="timerArc" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            </svg>
+            <span id="timerCount">30</span>
+          </div>
+        </div>
+        <p class="totp-note">* Simulación. En apps reales, el código cambia cada 30 segundos.</p>
+      </div>
+    </section>
+
   </main>
 </html>
