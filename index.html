@@ -3,19 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seguridad Web</title>
-
+  <title>CiberSeguridad — Aprende y Protégete</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/quiz.css">
 </head>
-
 <body>
-    <section id="menu">
-  <h1>Panel Principal</h1>
-
-  <button onclick="showScreen('web-security')">Seguridad Web</button>
-  <button onclick="showScreen('prevention')">Prevención</button>
-  <button onclick="showScreen('quiz')">Quiz</button>
-</section>
+ 
+  <!-- ===== MENU PRINCIPAL ===== -->
+  <div id="menu" class="menu-screen">
+    <div class="hero-bg">
+      <div class="grid-lines"></div>
+      <div class="glow-orb orb1"></div>
+      <div class="glow-orb orb2"></div>
+    </div>
+ 
+    <div class="hero-content">
+      <div class="badge">🛡️ SCESI Promesas G11</div>
+      <h1 class="hero-title">Seguridad<br><span class="accent">Digital</span></h1>
+      <p class="hero-sub">Aprende a protegerte en el mundo digital. Explora conceptos, prevención y pon a prueba tu conocimiento.</p>
+ 
+      <div class="card-grid">
+        <button class="nav-card" onclick="showScreen('web-security')">
+          <div class="card-icon">🔒</div>
+          <div class="card-body">
+            <h3>Seguridad Web</h3>
+            <p>HTTPS, cookies, formularios seguros y riesgos comunes</p>
+          </div>
+          <div class="card-arrow">→</div>
+        </button>
+ 
+        <button class="nav-card" onclick="showScreen('prevention')">
+          <div class="card-icon">🛡️</div>
+          <div class="card-body">
+            <h3>Prevención</h3>
+            <p>Cómo actuar ante incidentes y proteger tu información</p>
+          </div>
+          <div class="card-arrow">→</div>
+        </button>
+ 
+        <button class="nav-card highlight" onclick="showScreen('quiz')">
+          <div class="card-icon">⚡</div>
+          <div class="card-body">
+            <h3>Quiz Interactivo</h3>
+            <p>Pon a prueba lo que sabes sobre ciberseguridad</p>
+          </div>
+          <div class="card-arrow">→</div>
+        </button>
+      </div>
+    </div>
+  </div>
 <!--Mi persona 4-->>
   <section id="web-security" class="screen hidden">
     <h2>Seguridad Web</h2>
