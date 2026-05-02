@@ -38,18 +38,19 @@
     <h2>Quiz de Ciberseguridad</h2>
 
     <p>1. ¿Qué significa HTTPS?</p>
-    <button onclick="checkAnswer(0, true)">Protocolo seguro</button>
-    <button onclick="checkAnswer(0, false)">Un virus</button>
+    <button onclick="checkAnswer(0, true , this)">Protocolo seguro</button>
+    <button onclick="checkAnswer(0, false, this)">Un virus</button>
 
     <p>2. ¿Es seguro descargar archivos desconocidos?</p>
-    <button onclick="checkAnswer(1, false)">Sí</button>
-    <button onclick="checkAnswer(1, true)">No</button>
+    <button onclick="checkAnswer(1, false, this)">Sí</button>
+    <button onclick="checkAnswer(1, true, this)">No</button>
 
     <p>3. ¿Qué debes hacer con enlaces sospechosos?</p>
-    <button onclick="checkAnswer(2, true)">Evitar abrirlos</button>
-    <button onclick="checkAnswer(2, false)">Abrirlos sin problema</button>
+    <button onclick="checkAnswer(2, true, this)">Evitar abrirlos</button>
+    <button onclick="checkAnswer(2, false, this)">Abrirlos sin problema</button>
 
     <h3 id="score">Puntaje: 0/3</h3>
+    <p id="final"></p>
   </section>
 
   <script src="js/quiz.js"></script>
