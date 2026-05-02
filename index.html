@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/quiz.css">
 </head>
 <body>
- 
+
   <!-- ===== MENU PRINCIPAL ===== -->
   <div id="menu" class="menu-screen">
     <div class="hero-bg">
@@ -17,12 +17,12 @@
       <div class="glow-orb orb1"></div>
       <div class="glow-orb orb2"></div>
     </div>
- 
+
     <div class="hero-content">
       <div class="badge">🛡️ SCESI Promesas G11</div>
       <h1 class="hero-title">Seguridad<br><span class="accent">Digital</span></h1>
       <p class="hero-sub">Aprende a protegerte en el mundo digital. Explora conceptos, prevención y pon a prueba tu conocimiento.</p>
- 
+
       <div class="card-grid">
         <button class="nav-card" onclick="showScreen('web-security')">
           <div class="card-icon">🔒</div>
@@ -32,7 +32,7 @@
           </div>
           <div class="card-arrow">→</div>
         </button>
- 
+
         <button class="nav-card" onclick="showScreen('prevention')">
           <div class="card-icon">🛡️</div>
           <div class="card-body">
@@ -41,7 +41,7 @@
           </div>
           <div class="card-arrow">→</div>
         </button>
- 
+
         <button class="nav-card highlight" onclick="showScreen('quiz')">
           <div class="card-icon">⚡</div>
           <div class="card-body">
@@ -58,13 +58,13 @@
   <section id="web-security" class="screen hidden">
     <div class="screen-inner">
       <button class="back-btn" onclick="goBack()">← Volver</button>
- 
+
       <div class="screen-header">
         <span class="screen-tag">Módulo 01</span>
         <h2>Seguridad Web</h2>
         <p class="screen-desc">Comprende los fundamentos que protegen tu experiencia en internet.</p>
       </div>
- 
+
       <div class="concept-grid">
         <div class="concept-card green">
           <div class="concept-icon">🔐</div>
@@ -72,21 +72,21 @@
           <p>Protocolo que cifra la comunicación entre tu navegador y el servidor. Garantiza que nadie intercepte tus datos en tránsito.</p>
           <div class="concept-tag">Cifrado</div>
         </div>
- 
+
         <div class="concept-card blue">
           <div class="concept-icon">🍪</div>
           <h4>Cookies</h4>
           <p>Pequeños archivos que guardan tus preferencias y sesiones. Pueden ser seguros o usados para rastrearte sin tu consentimiento.</p>
           <div class="concept-tag">Sesiones</div>
         </div>
- 
+
         <div class="concept-card purple">
           <div class="concept-icon">📝</div>
           <h4>Formularios Seguros</h4>
           <p>Los formularios con HTTPS y validaciones protegen tus datos personales del robo y la manipulación maliciosa.</p>
           <div class="concept-tag">Protección</div>
         </div>
- 
+
         <div class="concept-card orange">
           <div class="concept-icon">🔑</div>
           <h4>Permisos del Navegador</h4>
@@ -94,7 +94,7 @@
           <div class="concept-tag">Privacidad</div>
         </div>
       </div>
- 
+
       <div class="risk-section">
         <h3 class="section-label">⚠️ Riesgos Comunes</h3>
         <div class="risk-list">
@@ -124,18 +124,17 @@
     </div>
   </section>
 
-  
   <!-- ===== PREVENCIÓN ===== -->
   <section id="prevention" class="screen hidden">
     <div class="screen-inner">
       <button class="back-btn" onclick="goBack()">← Volver</button>
- 
+
       <div class="screen-header">
         <span class="screen-tag">Módulo 02</span>
         <h2>Prevención</h2>
         <p class="screen-desc">Acciones concretas para protegerte antes, durante y después de un incidente.</p>
       </div>
- 
+
       <div class="prevention-grid">
         <div class="prev-card">
           <div class="prev-step">1</div>
@@ -174,7 +173,7 @@
           <p>El 2FA añade una capa extra de seguridad. Aunque te roben la contraseña, no podrán acceder sin el segundo factor.</p>
         </div>
       </div>
- 
+
       <div class="incident-box">
         <h3>🚨 ¿Qué hacer si fuiste víctima de un incidente?</h3>
         <ol class="incident-steps">
@@ -187,52 +186,106 @@
       </div>
     </div>
   </section>
-<!--Mi persona 4-->>
-  <section id="web-security" class="screen hidden">
-    <h2>Seguridad Web</h2>
 
-    <p><strong>HTTPS:</strong> Protege la información entre el usuario y el sitio.</p>
-    <p><strong>Cookies:</strong> Guardan datos del usuario.</p>
-    <p><strong>Formularios seguros:</strong> Evitan robo de datos.</p>
-
-    <h3>Riesgos</h3>
-    <ul>
-      <li>Enlaces sospechosos</li>
-      <li>Descargas inseguras</li>
-    </ul>
-    <button onclick="goBack()">⬅ Volver</button>
-  </section>
-  <section id="prevention" class="screen hidden">
-    <h2>Prevención</h2>
-    <ul>
-      <li>No hacer clic en enlaces desconocidos</li>
-      <li>No descargar archivos sospechosos</li>
-      <li>Usar sitios con HTTPS</li>
-      <li>Actualizar antivirus</li>
-    </ul>
-    <button onclick="goBack()">Volver</button>
-  </section>
+  <!-- ===== QUIZ ===== -->
   <section id="quiz" class="screen hidden">
-    <h2>Quiz de Ciberseguridad</h2>
+    <div class="screen-inner">
+      <button class="back-btn" onclick="goBack()">← Volver</button>
 
-    <p>1. ¿Qué significa HTTPS?</p>
-    <button onclick="checkAnswer(0, true , this)">Protocolo seguro</button>
-    <button onclick="checkAnswer(0, false, this)">Un virus</button>
+      <div class="screen-header">
+        <span class="screen-tag">Módulo 03</span>
+        <h2>Quiz de Ciberseguridad</h2>
+        <p class="screen-desc">Responde las preguntas y descubre cuánto sabes sobre seguridad digital.</p>
+      </div>
 
-    <p>2. ¿Es seguro descargar archivos desconocidos?</p>
-    <button onclick="checkAnswer(1, false, this)">Sí</button>
-    <button onclick="checkAnswer(1, true, this)">No</button>
+      <div class="quiz-progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <p class="progress-text" id="progress-text">0 de 5 respondidas</p>
 
-    <p>3. ¿Qué debes hacer con enlaces sospechosos?</p>
-    <button onclick="checkAnswer(2, true, this)">Evitar abrirlos</button>
-    <button onclick="checkAnswer(2, false, this)">Abrirlos sin problema</button>
+      <div class="questions-list">
 
-    <h3 id="score">Puntaje: 0/3</h3>
-    <p id="final"></p>
-    <button onclick="goBack()">Volver</button>
+        <div class="question-card" id="q0">
+          <div class="q-header">
+            <span class="q-num">01</span>
+            <span class="q-status" id="status0"></span>
+          </div>
+          <p class="q-text">¿Qué significa HTTPS?</p>
+          <div class="options">
+            <button class="opt-btn" onclick="checkAnswer(0, true, this)">🔒 Protocolo de transferencia seguro con cifrado</button>
+            <button class="opt-btn" onclick="checkAnswer(0, false, this)">💀 Un tipo de virus informático</button>
+            <button class="opt-btn" onclick="checkAnswer(0, false, this)">📧 Un protocolo de correo electrónico</button>
+          </div>
+          <div class="feedback" id="feedback0"></div>
+        </div>
+
+        <div class="question-card" id="q1">
+          <div class="q-header">
+            <span class="q-num">02</span>
+            <span class="q-status" id="status1"></span>
+          </div>
+          <p class="q-text">¿Es seguro descargar archivos de fuentes desconocidas?</p>
+          <div class="options">
+            <button class="opt-btn" onclick="checkAnswer(1, false, this)">✅ Sí, si el archivo se ve normal</button>
+            <button class="opt-btn" onclick="checkAnswer(1, true, this)">🚫 No, pueden contener malware</button>
+          </div>
+          <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <div class="question-card" id="q2">
+          <div class="q-header">
+            <span class="q-num">03</span>
+            <span class="q-status" id="status2"></span>
+          </div>
+          <p class="q-text">¿Qué debes hacer con enlaces sospechosos que recibes?</p>
+          <div class="options">
+            <button class="opt-btn" onclick="checkAnswer(2, true, this)">🛡️ Evitar abrirlos y reportarlos</button>
+            <button class="opt-btn" onclick="checkAnswer(2, false, this)">🖱️ Abrirlos para ver de qué se trata</button>
+            <button class="opt-btn" onclick="checkAnswer(2, false, this)">📤 Reenviarlos a contactos para avisar</button>
+          </div>
+          <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <div class="question-card" id="q3">
+          <div class="q-header">
+            <span class="q-num">04</span>
+            <span class="q-status" id="status3"></span>
+          </div>
+          <p class="q-text">¿Para qué sirve la autenticación de dos factores (2FA)?</p>
+          <div class="options">
+            <button class="opt-btn" onclick="checkAnswer(3, false, this)">🎨 Para cambiar el diseño del login</button>
+            <button class="opt-btn" onclick="checkAnswer(3, true, this)">🔐 Añade una capa extra de seguridad además de la contraseña</button>
+            <button class="opt-btn" onclick="checkAnswer(3, false, this)">📶 Mejora la velocidad de internet</button>
+          </div>
+          <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <div class="question-card" id="q4">
+          <div class="q-header">
+            <span class="q-num">05</span>
+            <span class="q-status" id="status4"></span>
+          </div>
+          <p class="q-text">¿Qué indica el candado 🔒 en la barra de dirección del navegador?</p>
+          <div class="options">
+            <button class="opt-btn" onclick="checkAnswer(4, false, this)">🚨 Que el sitio está bloqueado</button>
+            <button class="opt-btn" onclick="checkAnswer(4, false, this)">💳 Que puedes pagar de forma gratuita</button>
+            <button class="opt-btn" onclick="checkAnswer(4, true, this)">✅ Que la conexión usa HTTPS y está cifrada</button>
+          </div>
+          <div class="feedback" id="feedback4"></div>
+        </div>
+
+      </div>
+
+      <div class="score-panel" id="score-panel">
+        <div class="score-label">Puntaje</div>
+        <div class="score-display" id="score">0/5</div>
+        <div class="final-msg" id="final"></div>
+        <button class="retry-btn" onclick="resetQuiz()" id="retry-btn" style="display:none">🔄 Intentar de nuevo</button>
+      </div>
+
+    </div>
   </section>
 
   <script src="js/quiz.js"></script>
-
 </body>
 </html>
