@@ -158,5 +158,35 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTimer(30);
   }
 
+  /* ────────────────────────────────────────────────
+     4. MODAL DE TIPS DE PRIVACIDAD
+  ──────────────────────────────────────────────── */
+  const modal      = document.getElementById("tipModal");
+  const modalClose = document.getElementById("modalClose");
+  const tipContent = document.getElementById("tipContent");
+
+  document.querySelectorAll(".tip-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".privacy-card");
+      const tip  = card?.dataset.tip;
+      if (!tip || !modal) return;
+      tipContent.textContent = tip;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+    });
+  });
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+  }
+
+  if (modalClose) modalClose.addEventListener("click", closeModal);
+  if (modal) {
+    modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  }
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+
 
 });
