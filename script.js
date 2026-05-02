@@ -1,23 +1,39 @@
 /* ===================================================
-   CSESI Promesas G11 — Protección & Privacidad
-   Script interactivo: medidor contraseñas, 2FA,
-   generador de frases y modal de privacidad
+   CSESI Promesas G11 — script.js
+   Navbar toggle + interactividad de proteccion.html
    =================================================== */
 
+/* ── Navbar mobile toggle (index.html) ──────────────── */
+const menuToggle = document.querySelector("#menuToggle");
+const navLinks   = document.querySelector("#navLinks");
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  navLinks.addEventListener("click", (event) => {
+    if (event.target.tagName === "A") {
+      navLinks.classList.remove("active");
+    }
+  });
+}
+
+/* ── Interactividad de Protección & Privacidad ───────── */
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ────────────────────────────────────────────────
      1. MEDIDOR DE FORTALEZA DE CONTRASEÑA
   ──────────────────────────────────────────────── */
-  const pwInput      = document.getElementById("pwInput");
-  const togglePw     = document.getElementById("togglePw");
-  const strengthBar  = document.getElementById("strengthBar");
-  const strengthLabel= document.getElementById("strengthLabel");
-  const cLen         = document.getElementById("c-len");
-  const cUpper       = document.getElementById("c-upper");
-  const cLower       = document.getElementById("c-lower");
-  const cNum         = document.getElementById("c-num");
-  const cSym         = document.getElementById("c-sym");
+  const pwInput       = document.getElementById("pwInput");
+  const togglePw      = document.getElementById("togglePw");
+  const strengthBar   = document.getElementById("strengthBar");
+  const strengthLabel = document.getElementById("strengthLabel");
+  const cLen          = document.getElementById("c-len");
+  const cUpper        = document.getElementById("c-upper");
+  const cLower        = document.getElementById("c-lower");
+  const cNum          = document.getElementById("c-num");
+  const cSym          = document.getElementById("c-sym");
 
   if (pwInput) {
     togglePw.addEventListener("click", () => {
@@ -36,20 +52,18 @@ document.addEventListener("DOMContentLoaded", () => {
         sym:   /[^A-Za-z0-9]/.test(val),
       };
 
-      // Update criteria list
-      setMet(cLen,   checks.len,   "✔ Al menos 12 caracteres",  "✘ Al menos 12 caracteres");
-      setMet(cUpper, checks.upper, "✔ Mayúscula",               "✘ Mayúscula");
-      setMet(cLower, checks.lower, "✔ Minúscula",               "✘ Minúscula");
-      setMet(cNum,   checks.num,   "✔ Número",                  "✘ Número");
-      setMet(cSym,   checks.sym,   "✔ Símbolo (!@#$…)",         "✘ Símbolo (!@#$…)");
+      setMet(cLen,   checks.len,   "✔ Al menos 12 caracteres", "✘ Al menos 12 caracteres");
+      setMet(cUpper, checks.upper, "✔ Mayúscula",              "✘ Mayúscula");
+      setMet(cLower, checks.lower, "✔ Minúscula",              "✘ Minúscula");
+      setMet(cNum,   checks.num,   "✔ Número",                 "✘ Número");
+      setMet(cSym,   checks.sym,   "✔ Símbolo (!@#$…)",        "✘ Símbolo (!@#$…)");
 
       const score = Object.values(checks).filter(Boolean).length;
-
       const levels = [
-        { label: "Muy débil",  color: "#ff4444", w: "15%" },
-        { label: "Débil",      color: "#ff6b6b", w: "30%" },
-        { label: "Regular",    color: "#ffaa00", w: "55%" },
-        { label: "Fuerte",     color: "#4ea8ff", w: "80%" },
+        { label: "Muy débil",  color: "#ff4444", w: "15%"  },
+        { label: "Débil",      color: "#ff6b6b", w: "30%"  },
+        { label: "Regular",    color: "#ffaa00", w: "55%"  },
+        { label: "Fuerte",     color: "#4ea8ff", w: "80%"  },
         { label: "Muy fuerte", color: "#38f2af", w: "100%" },
       ];
 
@@ -61,10 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const lvl = levels[score - 1] || levels[0];
-      strengthBar.style.width    = lvl.w;
+      strengthBar.style.width      = lvl.w;
       strengthBar.style.background = lvl.color;
-      strengthLabel.textContent  = lvl.label;
-      strengthLabel.style.color  = lvl.color;
+      strengthLabel.textContent    = lvl.label;
+      strengthLabel.style.color    = lvl.color;
     });
   }
 
@@ -74,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
     el.classList.toggle("met", met);
   }
 
-  
   /* ────────────────────────────────────────────────
      2. GENERADOR DE FRASE CLAVE
   ──────────────────────────────────────────────── */
@@ -89,8 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "Cósmico","Silencioso","Furioso","Eterno","Invisible","Salvaje",
   ];
 
-  const generateBtn    = document.getElementById("generatePhrase");
-  const generatedPhrase= document.getElementById("generatedPhrase");
+  const generateBtn     = document.getElementById("generatePhrase");
+  const generatedPhrase = document.getElementById("generatedPhrase");
 
   if (generateBtn) {
     generateBtn.addEventListener("click", () => {
@@ -101,7 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const sym = pick(["!", "@", "#", "$", "&", "*"]);
       const phrase = `${w1}${adj}${w2}${num}${sym}`;
       generatedPhrase.textContent = phrase;
-      // reset animation
       generatedPhrase.style.animation = "none";
       requestAnimationFrame(() => { generatedPhrase.style.animation = ""; });
     });
@@ -109,17 +121,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
 
-  
   /* ────────────────────────────────────────────────
      3. SIMULADOR 2FA / TOTP
   ──────────────────────────────────────────────── */
-  const totpCode  = document.getElementById("totpCode");
-  const timerArc  = document.getElementById("timerArc");
-  const timerCount= document.getElementById("timerCount");
+  const totpCode   = document.getElementById("totpCode");
+  const timerArc   = document.getElementById("timerArc");
+  const timerCount = document.getElementById("timerCount");
 
   if (totpCode) {
     let secondsLeft = 30;
-    updateTOTP();          // generate first code immediately
+    updateTOTP();
     tick();
 
     function tick() {
@@ -134,9 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function updateTOTP() {
-      // Generate a random 6-digit code for simulation
       const code = String(Math.floor(100000 + Math.random() * 900000));
-      // Animate digit by digit
       totpCode.style.opacity = "0.3";
       setTimeout(() => {
         totpCode.textContent = code;
@@ -148,13 +157,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateTimer(secs) {
       if (timerCount) timerCount.textContent = secs;
       if (timerArc) {
-        // stroke-dasharray 100 means 100% = full circle
         const progress = (secs / 30) * 100;
         timerArc.style.strokeDashoffset = 100 - progress;
       }
     }
 
-    // Initialize arc
     updateTimer(30);
   }
 
@@ -187,6 +194,5 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
   }
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
-
 
 });

@@ -3,456 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CiberSeguridad — Protección & Privacidad</title>
+  <title>CSESI Promesas G11 | Cybersecurity Guide</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="logo">
+        <span class="logo-icon">🛡️</span>
+        <span>CSESI Cybersecurity</span>
+      </a>
 
-  <!-- GLITCH BACKGROUND -->
-  <div class="bg-grid"></div>
-  <div class="scanline"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#threats">Amenazas</a></li>
+        <li><a href="#protection">Protección</a></li>
+        <li><a href="#web-security">Seguridad Web</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-
-    <!-- HERO -->
-    <section id="introduccion" class="hero">
+    <section id="home" class="hero">
       <div class="hero-content">
-        <div class="terminal-label">// MÓDULO 03 — ACTIVO</div>
-        <h1 class="hero-title">
-          <span class="glitch" data-text="PROTECCIÓN">PROTECCIÓN</span><br/>
-          <span class="hero-sub">Privacidad &amp; Buenas Prácticas</span>
+        <p class="hero-badge">Proyecto educativo de ciberseguridad</p>
+
+        <h1>
+          Aprende ciberseguridad de forma clara, visual y práctica
         </h1>
-        <p class="hero-desc">
-          En la era digital, tu seguridad en línea es tu primera línea de defensa.<br/>
-          Aprende a blindar tu identidad, tus datos y tu privacidad.
+
+        <p class="hero-description">
+          Una guía creada por el equipo CSESI Promesas G11 para explicar amenazas,
+          buenas prácticas, seguridad web y prevención digital.
         </p>
-        <a href="#contrasenas" class="btn-primary">
-          <span class="btn-text">Comenzar</span>
-          <span class="btn-arrow">→</span>
-        </a>
+
+        <div class="hero-actions">
+          <a href="#threats" class="btn btn-primary">Explorar temas</a>
+          <a href="#quiz" class="btn btn-secondary">Probar quiz</a>
+        </div>
       </div>
-      <div class="hero-visual">
-        <div class="shield-wrap">
-          <svg class="shield-svg" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.9"/>
-                <stop offset="100%" style="stop-color:#00ccff;stop-opacity:0.6"/>
-              </linearGradient>
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-            </defs>
-            <path d="M100 10 L190 50 L190 120 Q190 185 100 210 Q10 185 10 120 L10 50 Z"
-              fill="none" stroke="url(#shieldGrad)" stroke-width="2.5" filter="url(#glow)" class="shield-path"/>
-            <path d="M100 30 L170 62 L170 120 Q170 172 100 192 Q30 172 30 120 L30 62 Z"
-              fill="rgba(0,255,136,0.05)" stroke="rgba(0,255,136,0.3)" stroke-width="1"/>
-            <text x="100" y="125" text-anchor="middle" font-family="Share Tech Mono" font-size="52" fill="url(#shieldGrad)" filter="url(#glow)" class="lock-icon">🔒</text>
-          </svg>
-          <div class="orbit orbit-1"></div>
-          <div class="orbit orbit-2"></div>
+
+      <div class="hero-card">
+        <div class="card-header">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="terminal-text">
+          <p><span>$</span> scan --cybersecurity</p>
+          <p><span>✓</span> Threats detected</p>
+          <p><span>✓</span> Protection enabled</p>
+          <p><span>✓</span> Team ready</p>
         </div>
       </div>
     </section>
 
-    <!-- CONTRASEÑAS SEGURAS -->
-    <section id="contrasenas" class="section">
-      <div class="section-header">
-        <span class="section-tag">01</span>
-        <h2>Contraseñas <span class="accent">Seguras</span></h2>
-        <p class="section-desc">Una contraseña fuerte es tu primera barrera de protección digital.</p>
-      </div>
-
-      <div class="password-grid">
-        <div class="password-rules card">
-          <h3 class="card-title"><span class="icon">🛡️</span> Reglas de Oro</h3>
-          <ul class="rule-list">
-            <li><span class="check">✔</span> Mínimo <strong>12 caracteres</strong></li>
-            <li><span class="check">✔</span> Combina <strong>mayúsculas, minúsculas, números y símbolos</strong></li>
-            <li><span class="check">✔</span> Evita datos personales (nombre, fecha de nacimiento)</li>
-            <li><span class="check">✔</span> Usa una <strong>contraseña diferente</strong> por cada cuenta</li>
-            <li><span class="check">✔</span> Cámbiala cada <strong>3-6 meses</strong></li>
-            <li><span class="x">✘</span> Nunca uses "123456", "password" o "qwerty"</li>
-          </ul>
-        </div>
-
-        <div class="password-strength card">
-          <h3 class="card-title"><span class="icon">⚡</span> Medidor de Fortaleza</h3>
-          <p class="card-sub">Prueba la seguridad de tu contraseña:</p>
-          <div class="input-wrap">
-            <input type="password" id="pwInput" placeholder="Escribe una contraseña…" autocomplete="off"/>
-            <button id="togglePw" aria-label="Mostrar/Ocultar">👁</button>
-          </div>
-          <div class="strength-bar-wrap">
-            <div class="strength-bar" id="strengthBar"></div>
-          </div>
-          <p id="strengthLabel" class="strength-label">—</p>
-          <ul id="pwCriteria" class="pw-criteria">
-            <li id="c-len">✘ Al menos 12 caracteres</li>
-            <li id="c-upper">✘ Mayúscula</li>
-            <li id="c-lower">✘ Minúscula</li>
-            <li id="c-num">✘ Número</li>
-            <li id="c-sym">✘ Símbolo (!@#$…)</li>
-          </ul>
-        </div>
-
-        <div class="password-tip card">
-          <h3 class="card-title"><span class="icon">💡</span> Tip: Frase Clave</h3>
-          <p>En lugar de una sola palabra compleja, usa una <strong>frase de contraseña</strong>:</p>
-          <div class="passphrase-demo">
-            <span class="pp-word">Mi</span>
-            <span class="pp-word">Gato</span>
-            <span class="pp-word">Come</span>
-            <span class="pp-word">3</span>
-            <span class="pp-word">Pizzas!</span>
-          </div>
-          <p class="pp-result"><code>MiGatoCome3Pizzas!</code></p>
-          <p class="pp-note">Fácil de recordar. Difícil de romper. ✓</p>
-          <button class="btn-secondary" id="generatePhrase">Generar frase aleatoria</button>
-          <p id="generatedPhrase" class="generated-phrase"></p>
-        </div>
-      </div>
+    <section id="threats" class="section-placeholder">
+      <h2>Amenazas comunes</h2>
+      <p>
+        Conoce ataques como phishing, malware, ransomware, spyware e ingeniería social.
+      </p>
     </section>
 
-      <!-- 2FA -->
-    <section id="2fa" class="section section-alt">
-      <div class="section-header">
-        <span class="section-tag">02</span>
-        <h2>Autenticación de <span class="accent">Dos Factores</span></h2>
-        <p class="section-desc">Agrega una segunda capa de seguridad más allá de tu contraseña.</p>
-      </div>
-
-      <div class="tfa-layout">
-        <div class="tfa-steps card">
-          <h3 class="card-title">¿Cómo funciona el 2FA?</h3>
-          <div class="steps">
-            <div class="step">
-              <div class="step-num">1</div>
-              <div class="step-content">
-                <strong>Ingresas tu contraseña</strong>
-                <p>El primer factor: algo que <em>sabes</em>.</p>
-              </div>
-            </div>
-            <div class="step-arrow">↓</div>
-            <div class="step">
-              <div class="step-num">2</div>
-              <div class="step-content">
-                <strong>Verificación adicional</strong>
-                <p>El segundo factor: algo que <em>tienes</em> o <em>eres</em>.</p>
-              </div>
-            </div>
-            <div class="step-arrow">↓</div>
-            <div class="step">
-              <div class="step-num">3</div>
-              <div class="step-content">
-                <strong>Acceso concedido</strong>
-                <p>Solo tú puedes entrar, incluso si roban tu contraseña.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tfa-types">
-          <div class="tfa-card card">
-            <div class="tfa-icon">📱</div>
-            <h4>App Autenticadora</h4>
-            <p>Google Authenticator, Authy. Genera códigos cada 30 segundos.</p>
-            <span class="badge badge-best">MÁS SEGURO</span>
-          </div>
-          <div class="tfa-card card">
-            <div class="tfa-icon">📨</div>
-            <h4>SMS / Email</h4>
-            <p>Código enviado a tu teléfono o correo. Cómodo pero más vulnerable.</p>
-            <span class="badge badge-ok">ACEPTABLE</span>
-          </div>
-          <div class="tfa-card card">
-            <div class="tfa-icon">🔑</div>
-            <h4>Llave de Seguridad</h4>
-            <p>Hardware físico (YubiKey). La opción más robusta.</p>
-            <span class="badge badge-best">ELITE</span>
-          </div>
-          <div class="tfa-card card">
-            <div class="tfa-icon">🪪</div>
-            <h4>Biometría</h4>
-            <p>Huella dactilar, reconocimiento facial. Rápido y conveniente.</p>
-            <span class="badge badge-ok">BUENO</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tfa-demo card">
-        <h3 class="card-title">Simulador de Código 2FA</h3>
-        <p>Así se ve un código TOTP en tiempo real:</p>
-        <div class="totp-display">
-          <div class="totp-code" id="totpCode">------</div>
-          <div class="totp-timer">
-            <svg viewBox="0 0 36 36" class="timer-circle">
-              <path class="timer-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-              <path class="timer-arc" id="timerArc" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-            </svg>
-            <span id="timerCount">30</span>
-          </div>
-        </div>
-        <p class="totp-note">* Simulación. En apps reales, el código cambia cada 30 segundos.</p>
-      </div>
+    <section id="protection" class="section-placeholder">
+      <h2>Protección y privacidad</h2>
+      <p>
+        Aprende buenas prácticas para proteger cuentas, contraseñas, datos personales y dispositivos.
+      </p>
+      <br/>
+      <a href="proteccion.html" class="btn btn-primary" style="margin-top:1rem;">
+        Ver módulo completo →
+      </a>
     </section>
 
-    <!-- PRIVACIDAD DIGITAL -->
-    <section id="privacidad" class="section">
-      <div class="section-header">
-        <span class="section-tag">03</span>
-        <h2>Privacidad <span class="accent">Digital</span></h2>
-        <p class="section-desc">Controla quién tiene acceso a tu información y cómo se usa.</p>
-      </div>
-
-      <div class="privacy-grid">
-        <div class="privacy-card card" data-tip="Revisa las configuraciones de privacidad de cada red social y limita quién puede ver tu información.">
-          <div class="priv-icon">📲</div>
-          <h4>Redes Sociales</h4>
-          <p>Configura perfiles en privado, limita el acceso a tu información personal.</p>
-          <button class="tip-btn">Ver tip →</button>
-        </div>
-        <div class="privacy-card card" data-tip="Activa la navegación privada, usa extensiones bloqueadoras de rastreadores como uBlock Origin.">
-          <div class="priv-icon">🌐</div>
-          <h4>Navegación Web</h4>
-          <p>Usa modo incógnito, bloquea rastreadores y cookies de terceros.</p>
-          <button class="tip-btn">Ver tip →</button>
-        </div>
-        <div class="privacy-card card" data-tip="Activa el cifrado de extremo a extremo. Usa Signal o WhatsApp para mensajes sensibles.">
-          <div class="priv-icon">💬</div>
-          <h4>Mensajería</h4>
-          <p>Prefiere aplicaciones con cifrado de extremo a extremo.</p>
-          <button class="tip-btn">Ver tip →</button>
-        </div>
-        <div class="privacy-card card" data-tip="Lee los permisos antes de instalar apps. Nunca des acceso innecesario a cámara, micrófono o ubicación.">
-          <div class="priv-icon">📦</div>
-          <h4>Aplicaciones</h4>
-          <p>Revisa permisos de apps. Solo otorga acceso a lo estrictamente necesario.</p>
-          <button class="tip-btn">Ver tip →</button>
-        </div>
-        <div class="privacy-card card" data-tip="Usa gestores de contraseñas como Bitwarden o 1Password. Nunca guardes contraseñas en el navegador sin cifrado.">
-          <div class="priv-icon">🗄️</div>
-          <h4>Gestores de Contraseñas</h4>
-          <p>Usa un gestor seguro en lugar de recordar o anotar contraseñas.</p>
-          <button class="tip-btn">Ver tip →</button>
-        </div>
-        <div class="privacy-card card" data-tip="Mantén siempre actualizado tu sistema operativo y aplicaciones. Las actualizaciones corrigen vulnerabilidades críticas.">
-          <div class="priv-icon">🔄</div>
-          <h4>Actualizaciones</h4>
-          <p>Mantén actualizado tu sistema operativo y todas tus aplicaciones.</p>
-          <button class="tip-btn">Ver tip →</button>
-        </div>
-      </div>
-
-      <!-- MODAL TIP -->
-      <div id="tipModal" class="modal-overlay" aria-hidden="true">
-        <div class="modal-box">
-          <button class="modal-close" id="modalClose">✕</button>
-          <div class="modal-icon">💡</div>
-          <p id="tipContent" class="modal-text"></p>
-        </div>
-      </div>
+    <section id="web-security" class="section-placeholder">
+      <h2>Seguridad web</h2>
+      <p>
+        Descubre conceptos como HTTPS, cookies, formularios seguros y navegación responsable.
+      </p>
     </section>
 
-    <!-- HERRAMIENTAS: VPN, FIREWALL, ANTIVIRUS -->
-    <section id="herramientas" class="section section-alt">
-      <div class="section-header">
-        <span class="section-tag">04</span>
-        <h2>Herramientas de <span class="accent">Protección</span></h2>
-        <p class="section-desc">VPN, Firewall y Antivirus: la tríada de tu seguridad digital.</p>
-      </div>
-
-      <div class="tools-grid">
-        <!-- VPN -->
-        <div class="tool-card card">
-          <div class="tool-header">
-            <div class="tool-icon vpn-icon">🔐</div>
-            <h3>VPN</h3>
-            <span class="tool-full">Red Privada Virtual</span>
-          </div>
-          <div class="tool-body">
-            <p>Cifra tu conexión a internet y oculta tu dirección IP real.</p>
-            <ul class="tool-list">
-              <li>✔ Protege en redes Wi-Fi públicas</li>
-              <li>✔ Oculta tu actividad del proveedor</li>
-              <li>✔ Accede a contenido con restricciones geográficas</li>
-              <li>✘ No te hace anónimo al 100%</li>
-            </ul>
-            <div class="tool-examples">
-              <span class="ex-tag">ProtonVPN</span>
-              <span class="ex-tag">Mullvad</span>
-              <span class="ex-tag">NordVPN</span>
-            </div>
-          </div>
-          <div class="tool-visual vpn-visual">
-            <div class="vpn-tunnel">
-              <div class="tunnel-device">💻</div>
-              <div class="tunnel-line">
-                <span class="tunnel-dot"></span>
-                <span class="tunnel-dot"></span>
-                <span class="tunnel-dot"></span>
-              </div>
-              <div class="tunnel-server">🛡</div>
-              <div class="tunnel-line">
-                <span class="tunnel-dot"></span>
-                <span class="tunnel-dot"></span>
-                <span class="tunnel-dot"></span>
-              </div>
-              <div class="tunnel-web">🌐</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- FIREWALL -->
-        <div class="tool-card card">
-          <div class="tool-header">
-            <div class="tool-icon fw-icon">🧱</div>
-            <h3>Firewall</h3>
-            <span class="tool-full">Cortafuegos</span>
-          </div>
-          <div class="tool-body">
-            <p>Filtra el tráfico de red entrante y saliente según reglas de seguridad.</p>
-            <ul class="tool-list">
-              <li>✔ Bloquea conexiones no autorizadas</li>
-              <li>✔ Protege de ataques externos</li>
-              <li>✔ Integrado en todos los sistemas operativos</li>
-              <li>✘ No detecta malware dentro del sistema</li>
-            </ul>
-            <div class="tool-examples">
-              <span class="ex-tag">Windows Firewall</span>
-              <span class="ex-tag">iptables</span>
-              <span class="ex-tag">pfSense</span>
-            </div>
-          </div>
-          <div class="tool-visual fw-visual">
-            <div class="fw-wall">
-              <div class="fw-brick" style="animation-delay:0s"></div>
-              <div class="fw-brick" style="animation-delay:0.1s"></div>
-              <div class="fw-brick" style="animation-delay:0.2s"></div>
-              <div class="fw-brick" style="animation-delay:0.3s"></div>
-              <div class="fw-brick" style="animation-delay:0.4s"></div>
-              <div class="fw-brick" style="animation-delay:0.5s"></div>
-            </div>
-            <div class="fw-arrow blocked">⚠ Bloqueado</div>
-            <div class="fw-arrow allowed">✔ Permitido</div>
-          </div>
-        </div>
-
-        <!-- ANTIVIRUS -->
-        <div class="tool-card card">
-          <div class="tool-header">
-            <div class="tool-icon av-icon">🦠</div>
-            <h3>Antivirus</h3>
-            <span class="tool-full">Protección contra Malware</span>
-          </div>
-          <div class="tool-body">
-            <p>Detecta, bloquea y elimina software malicioso en tu dispositivo.</p>
-            <ul class="tool-list">
-              <li>✔ Detecta virus, troyanos y spyware</li>
-              <li>✔ Análisis en tiempo real</li>
-              <li>✔ Protección en descargas y emails</li>
-              <li>✘ Requiere actualizaciones constantes</li>
-            </ul>
-            <div class="tool-examples">
-              <span class="ex-tag">Windows Defender</span>
-              <span class="ex-tag">Malwarebytes</span>
-              <span class="ex-tag">Bitdefender</span>
-            </div>
-          </div>
-          <div class="tool-visual av-visual">
-            <div class="scan-line" id="scanLine"></div>
-            <div class="scan-threats">
-              <span class="threat clean" id="threat1">🟢 Limpio</span>
-              <span class="threat clean" id="threat2">🟢 Limpio</span>
-              <span class="threat bad" id="threat3">🔴 Detectado!</span>
-              <span class="threat clean" id="threat4">🟢 Limpio</span>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section id="quiz" class="section-placeholder">
+      <h2>Quiz interactivo</h2>
+      <p>
+        Pon a prueba tus conocimientos con preguntas básicas sobre ciberseguridad.
+      </p>
     </section>
-    
-    <!-- TABLA BUENAS Y MALAS PRÁCTICAS -->
-    <section id="practicas" class="section">
-      <div class="section-header">
-        <span class="section-tag">05</span>
-        <h2>Buenas vs Malas <span class="accent">Prácticas</span></h2>
-        <p class="section-desc">Compara qué hábitos te protegen y cuáles te exponen.</p>
-      </div>
-
-      <div class="table-wrap card">
-        <div class="table-legend">
-          <span class="legend-good">✔ Buena práctica</span>
-          <span class="legend-bad">✘ Mala práctica</span>
-        </div>
-        <div class="practices-table">
-          <div class="table-head">
-            <div class="col-cat">Categoría</div>
-            <div class="col-good">✔ Lo que SÍ debes hacer</div>
-            <div class="col-bad">✘ Lo que NO debes hacer</div>
-          </div>
-
-          <div class="table-row" data-cat="contraseñas">
-            <div class="col-cat"><span class="row-icon">🔑</span>Contraseñas</div>
-            <div class="col-good"><span class="good-item">Usar frases largas y únicas por cuenta</span></div>
-            <div class="col-bad"><span class="bad-item">Reutilizar la misma contraseña en todo</span></div>
-          </div>
-          <div class="table-row" data-cat="redes">
-            <div class="col-cat"><span class="row-icon">📶</span>Redes Wi-Fi</div>
-            <div class="col-good"><span class="good-item">Usar VPN en redes públicas</span></div>
-            <div class="col-bad"><span class="bad-item">Conectarse a Wi-Fi abierta sin protección</span></div>
-          </div>
-          <div class="table-row" data-cat="actualizaciones">
-            <div class="col-cat"><span class="row-icon">🔄</span>Actualizaciones</div>
-            <div class="col-good"><span class="good-item">Actualizar software inmediatamente</span></div>
-            <div class="col-bad"><span class="bad-item">Ignorar las notificaciones de actualización</span></div>
-          </div>
-          <div class="table-row" data-cat="email">
-            <div class="col-cat"><span class="row-icon">📧</span>Correo</div>
-            <div class="col-good"><span class="good-item">Verificar remitentes antes de abrir enlaces</span></div>
-            <div class="col-bad"><span class="bad-item">Hacer clic en links de correos sospechosos</span></div>
-          </div>
-          <div class="table-row" data-cat="backup">
-            <div class="col-cat"><span class="row-icon">💾</span>Respaldos</div>
-            <div class="col-good"><span class="good-item">Hacer backups regulares en la nube y local</span></div>
-            <div class="col-bad"><span class="bad-item">No tener ninguna copia de seguridad</span></div>
-          </div>
-          <div class="table-row" data-cat="permisos">
-            <div class="col-cat"><span class="row-icon">📦</span>Permisos</div>
-            <div class="col-good"><span class="good-item">Revisar y limitar permisos de apps</span></div>
-            <div class="col-bad"><span class="bad-item">Dar todos los permisos sin leer</span></div>
-          </div>
-          <div class="table-row" data-cat="dispositivos">
-            <div class="col-cat"><span class="row-icon">💻</span>Dispositivos</div>
-            <div class="col-good"><span class="good-item">Bloquear pantalla con PIN/biometría</span></div>
-            <div class="col-bad"><span class="bad-item">Dejar dispositivos desbloqueados y sin vigilancia</span></div>
-          </div>
-          <div class="table-row" data-cat="informacion">
-            <div class="col-cat"><span class="row-icon">🙊</span>Información</div>
-            <div class="col-good"><span class="good-item">Compartir datos mínimos necesarios</span></div>
-            <div class="col-bad"><span class="bad-item">Publicar datos sensibles en redes sociales</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-
-
   </main>
 
-  <!-- FOOTER -->
-  <footer>
+  <footer class="site-footer">
     <div class="footer-content">
-      <div class="footer-logo">
-        <span class="bracket">[</span>CYBER<span class="accent">SEC</span><span class="bracket">]</span>
-      </div>
-      <p class="footer-sub">Proyecto académico de Ciberseguridad •</p>
+      <p>© 2026 CSESI Promesas G11</p>
+      <p>Proyecto grupal para practicar Git, GitHub, Pull Requests y buenas prácticas.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+</body>
 </html>
