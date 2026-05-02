@@ -276,3 +276,119 @@ main, footer { position: relative; z-index: 1; }
 .orbit-2 { width: 280px; height: 280px; border-color: rgba(78, 168, 255, 0.15); animation-duration: 14s; animation-direction: reverse; }
 @keyframes orbit-spin { to { transform: rotate(360deg); } }
 
+
+/* ================================================================
+   SECTION 01 — CONTRASEÑAS
+   ================================================================ */
+.password-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+}
+.password-tip { grid-column: 1 / -1; }
+
+.rule-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.rule-list li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.95rem; color: var(--text-muted); }
+.rule-list li strong { color: var(--text-main); }
+.check { color: var(--primary); font-weight: 800; flex-shrink: 0; }
+.x { color: var(--danger); font-weight: 800; flex-shrink: 0; }
+
+/* Password strength input */
+.input-wrap {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+.input-wrap input {
+  flex: 1;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  padding: 0.6rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input-wrap input:focus { border-color: var(--primary); }
+.input-wrap button {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.input-wrap button:hover { background: rgba(56,242,175,0.1); }
+
+.strength-bar-wrap {
+  height: 6px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.strength-bar {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  transition: width 0.4s ease, background 0.4s ease;
+}
+.strength-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+.pw-criteria { display: flex; flex-direction: column; gap: 0.35rem; }
+.pw-criteria li {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  transition: color 0.2s;
+}
+.pw-criteria li.met { color: var(--primary); }
+
+/* Passphrase tip */
+.passphrase-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0.5rem;
+}
+.pp-word {
+  padding: 0.3rem 0.7rem;
+  background: rgba(56,242,175,0.1);
+  border: 1px solid rgba(56,242,175,0.25);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+.pp-result {
+  margin-bottom: 0.4rem;
+}
+.pp-result code {
+  background: rgba(0,0,0,0.4);
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+.pp-note {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+.generated-phrase {
+  margin-top: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--primary);
+  font-size: 0.9rem;
+  min-height: 1.4rem;
+  animation: fade-in 0.3s ease;
+}
+@keyframes fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
