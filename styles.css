@@ -1,0 +1,63 @@
+/* ===================================================
+   CSESI Promesas G11 — Protección & Privacidad
+   Paleta alineada con el proyecto principal
+   =================================================== */
+
+:root {
+  --bg-main: #07111f;
+  --bg-secondary: #0d1b2f;
+  --bg-card: #12243d;
+  --primary: #38f2af;
+  --secondary: #4ea8ff;
+  --danger: #ff6b6b;
+  --text-main: #f8fafc;
+  --text-muted: #b6c2d1;
+  --border-soft: rgba(255, 255, 255, 0.12);
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.35);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --max-width: 1120px;
+  --font-mono: "Share Tech Mono", "Courier New", monospace;
+  --font-body: "Exo 2", Arial, Helvetica, sans-serif;
+}
+
+/* ── Reset ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: radial-gradient(circle at top left, #12335b 0%, var(--bg-main) 42%);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; }
+
+/* ── Decorative Background ──────────────────────────── */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(56, 242, 175, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 242, 175, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+.scanline {
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.06) 2px,
+    rgba(0, 0, 0, 0.06) 4px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+main, footer { position: relative; z-index: 1; }
