@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CiberSeguridad — Protección & Privacidad</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- GLITCH BACKGROUND -->
+  <div class="bg-grid"></div>
+  <div class="scanline"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="introduccion" class="hero">
+      <div class="hero-content">
+        <div class="terminal-label">// MÓDULO 03 — ACTIVO</div>
+        <h1 class="hero-title">
+          <span class="glitch" data-text="PROTECCIÓN">PROTECCIÓN</span><br/>
+          <span class="hero-sub">Privacidad &amp; Buenas Prácticas</span>
+        </h1>
+        <p class="hero-desc">
+          En la era digital, tu seguridad en línea es tu primera línea de defensa.<br/>
+          Aprende a blindar tu identidad, tus datos y tu privacidad.
+        </p>
+        <a href="#contrasenas" class="btn-primary">
+          <span class="btn-text">Comenzar</span>
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+      <div class="hero-visual">
+        <div class="shield-wrap">
+          <svg class="shield-svg" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.9"/>
+                <stop offset="100%" style="stop-color:#00ccff;stop-opacity:0.6"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <path d="M100 10 L190 50 L190 120 Q190 185 100 210 Q10 185 10 120 L10 50 Z"
+              fill="none" stroke="url(#shieldGrad)" stroke-width="2.5" filter="url(#glow)" class="shield-path"/>
+            <path d="M100 30 L170 62 L170 120 Q170 172 100 192 Q30 172 30 120 L30 62 Z"
+              fill="rgba(0,255,136,0.05)" stroke="rgba(0,255,136,0.3)" stroke-width="1"/>
+            <text x="100" y="125" text-anchor="middle" font-family="Share Tech Mono" font-size="52" fill="url(#shieldGrad)" filter="url(#glow)" class="lock-icon">🔒</text>
+          </svg>
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</html>
