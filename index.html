@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguridad Web</title>
+
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+<!--Mi persona 4-->>
+  <section id="web-security">
+    <h2>Seguridad Web</h2>
+
+    <p><strong>HTTPS:</strong> Protege la información entre el usuario y el sitio.</p>
+    <p><strong>Cookies:</strong> Guardan datos del usuario.</p>
+    <p><strong>Formularios seguros:</strong> Evitan robo de datos.</p>
+
+    <h3>Riesgos</h3>
+    <ul>
+      <li>Enlaces sospechosos</li>
+      <li>Descargas inseguras</li>
+    </ul>
+  </section>
+  <section id="prevention">
+    <h2>Prevención</h2>
+    <ul>
+      <li>No hacer clic en enlaces desconocidos</li>
+      <li>No descargar archivos sospechosos</li>
+      <li>Usar sitios con HTTPS</li>
+      <li>Actualizar antivirus</li>
+    </ul>
+  </section>
+
+  <!-- 🧪 QUIZ -->
+  <section id="quiz">
+    <h2>Quiz de Ciberseguridad</h2>
+
+    <p>1. ¿Qué significa HTTPS?</p>
+    <button onclick="checkAnswer(0, true)">Protocolo seguro</button>
+    <button onclick="checkAnswer(0, false)">Un virus</button>
+
+    <p>2. ¿Es seguro descargar archivos desconocidos?</p>
+    <button onclick="checkAnswer(1, false)">Sí</button>
+    <button onclick="checkAnswer(1, true)">No</button>
+
+    <p>3. ¿Qué debes hacer con enlaces sospechosos?</p>
+    <button onclick="checkAnswer(2, true)">Evitar abrirlos</button>
+    <button onclick="checkAnswer(2, false)">Abrirlos sin problema</button>
+
+    <h3 id="score">Puntaje: 0/3</h3>
+  </section>
+
+  <script src="js/quiz.js"></script>
+
+</body>
+</html>
