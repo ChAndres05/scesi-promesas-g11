@@ -21,3 +21,46 @@ Este proyecto es un sitio web educativo sobre ciberseguridad. Su objetivo es exp
 - JavaScript
 - Git
 - GitHub
+
+## Estructura del proyecto
+
+csesi-promesas-g11/
+├── index.html
+├── styles.css
+├── script.js
+└── README.md
+
+### Flujo de trabajo
+
+El equipo trabajará usando ramas separadas por funcionalidad.
+
+### Ramas principales:
+
+main
+develop
+
+### Ramas de trabajo:
+
+feature/add-home-page
+feature/add-cyber-threats-section
+feature/add-cyber-protection-section
+feature/add-web-security-quiz
+### Cómo ejecutar el proyecto
+
+#### 1. Clonar el repositorio:
+```bash
+git clone git@github.com:TU-USUARIO/csesi-promesas-g11.git
+```
+#### 2. Entrar a la carpeta:
+```bash
+cd csesi-promesas-g11
+```
+
+#### 3. Abrir el archivo index.html en el navegador.
+
+Commit:
+
+```bash
+git add README.md
+git commit -m "docs: update README with project structure"
+```
