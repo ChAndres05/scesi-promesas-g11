@@ -594,3 +594,134 @@ main, footer { position: relative; z-index: 1; }
 .modal-close:hover { background: rgba(255,100,100,0.15); color: var(--danger); }
 .modal-icon { font-size: 2.4rem; margin-bottom: 1rem; }
 .modal-text { color: var(--text-muted); font-size: 0.97rem; line-height: 1.7; }
+
+/* ================================================================
+   SECTION 04 — HERRAMIENTAS
+   ================================================================ */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+.tool-header {
+  padding: 1.4rem 1.4rem 1rem;
+  border-bottom: 1px solid var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.tool-icon { font-size: 2rem; margin-bottom: 0.3rem; }
+.tool-header h3 { font-size: 1.2rem; font-weight: 800; }
+.tool-full { font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono); letter-spacing: 1px; }
+
+.tool-body { padding: 1.2rem 1.4rem; flex: 1; }
+.tool-body > p { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1rem; }
+.tool-list { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+.tool-list li { font-size: 0.82rem; color: var(--text-muted); }
+.tool-list li:has(✔) { color: var(--text-muted); }
+
+.tool-examples { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.ex-tag {
+  padding: 0.2rem 0.6rem;
+  background: rgba(56,242,175,0.08);
+  border: 1px solid rgba(56,242,175,0.2);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-family: var(--font-mono);
+}
+
+/* Tool visual panels */
+.tool-visual {
+  margin: 0 1.4rem 1.4rem;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  background: rgba(0,0,0,0.25);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* VPN Tunnel */
+.vpn-tunnel {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+}
+.tunnel-line { display: flex; gap: 3px; }
+.tunnel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: tunnel-flow 1.2s ease-in-out infinite;
+  opacity: 0.5;
+}
+.tunnel-dot:nth-child(2) { animation-delay: 0.4s; }
+.tunnel-dot:nth-child(3) { animation-delay: 0.8s; }
+@keyframes tunnel-flow { 0%,100% { opacity: 0.15; } 50% { opacity: 1; } }
+
+/* Firewall Wall */
+.fw-wall {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.fw-brick {
+  height: 14px;
+  background: rgba(78,168,255,0.2);
+  border: 1px solid rgba(78,168,255,0.3);
+  border-radius: 2px;
+  animation: fw-pulse 2s ease-in-out infinite;
+}
+@keyframes fw-pulse { 0%,100% { opacity: 0.5; } 50% { opacity: 1; background: rgba(78,168,255,0.35); } }
+.fw-arrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin: 2px 0;
+}
+.fw-arrow.blocked { color: var(--danger); background: rgba(255,107,107,0.1); border: 1px solid rgba(255,107,107,0.2); }
+.fw-arrow.allowed { color: var(--primary); background: rgba(56,242,175,0.08); border: 1px solid rgba(56,242,175,0.2); }
+
+/* Antivirus Scan */
+.av-visual { flex-direction: column; gap: 0.4rem; position: relative; overflow: hidden; }
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  top: 0;
+  animation: scan-move 2s linear infinite;
+  box-shadow: 0 0 10px var(--primary);
+}
+@keyframes scan-move { 0% { top: 0; } 100% { top: 100%; } }
+.scan-threats { display: flex; flex-direction: column; gap: 0.3rem; width: 100%; }
+.threat {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+}
+.threat.clean { color: var(--primary); background: rgba(56,242,175,0.07); }
+.threat.bad { color: var(--danger); background: rgba(255,107,107,0.1); animation: threat-blink 1s ease-in-out infinite; }
+@keyframes threat-blink { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+/* Icon accent colors */
+.vpn-icon { filter: hue-rotate(0deg); }
+.tool-card:nth-child(1) .tool-header { border-bottom-color: rgba(56,242,175,0.2); }
+.tool-card:nth-child(2) .tool-header { border-bottom-color: rgba(78,168,255,0.2); }
+.tool-card:nth-child(3) .tool-header { border-bottom-color: rgba(255,107,107,0.2); }
