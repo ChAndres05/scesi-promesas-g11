@@ -439,6 +439,37 @@
       </div>
     </section>
 
+    <!-- QUIZ INTERACTIVO -->
+    <section id="quiz" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">06</span>
+        <h2>Quiz de <span class="accent">Ciberseguridad</span></h2>
+        <p class="section-desc">Pon a prueba tus conocimientos de protección digital.</p>
+      </div>
+
+      <div class="quiz-container card">
+        <div class="quiz-progress">
+          <div class="quiz-bar-wrap">
+            <div class="quiz-bar" id="quizBar"></div>
+          </div>
+          <span id="quizProgressText">Pregunta 1 de 5</span>
+        </div>
+        <div id="quizContent">
+          <div class="quiz-question" id="questionText"></div>
+          <div class="quiz-options" id="quizOptions"></div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+          <button class="btn-primary" id="nextBtn" style="display:none">Siguiente →</button>
+        </div>
+        <div id="quizResult" style="display:none" class="quiz-result">
+          <div class="result-icon" id="resultIcon"></div>
+          <h3 id="resultTitle"></h3>
+          <p id="resultScore"></p>
+          <p id="resultMsg"></p>
+          <button class="btn-primary" id="retryBtn">Intentar de nuevo</button>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 
