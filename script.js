@@ -109,5 +109,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
 
+  
+  /* ────────────────────────────────────────────────
+     3. SIMULADOR 2FA / TOTP
+  ──────────────────────────────────────────────── */
+  const totpCode  = document.getElementById("totpCode");
+  const timerArc  = document.getElementById("timerArc");
+  const timerCount= document.getElementById("timerCount");
+
+  if (totpCode) {
+    let secondsLeft = 30;
+    updateTOTP();          // generate first code immediately
+    tick();
+
+    function tick() {
+      setInterval(() => {
+        secondsLeft--;
+        if (secondsLeft <= 0) {
+          secondsLeft = 30;
+          updateTOTP();
+        }
+        updateTimer(secondsLeft);
+      }, 1000);
+    }
+
+    function updateTOTP() {
+      // Generate a random 6-digit code for simulation
+      const code = String(Math.floor(100000 + Math.random() * 900000));
+      // Animate digit by digit
+      totpCode.style.opacity = "0.3";
+      setTimeout(() => {
+        totpCode.textContent = code;
+        totpCode.style.opacity = "1";
+        totpCode.style.transition = "opacity 0.4s ease";
+      }, 200);
+    }
+
+    function updateTimer(secs) {
+      if (timerCount) timerCount.textContent = secs;
+      if (timerArc) {
+        // stroke-dasharray 100 means 100% = full circle
+        const progress = (secs / 30) * 100;
+        timerArc.style.strokeDashoffset = 100 - progress;
+      }
+    }
+
+    // Initialize arc
+    updateTimer(30);
+  }
+
 
 });
