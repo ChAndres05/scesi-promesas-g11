@@ -725,3 +725,91 @@ main, footer { position: relative; z-index: 1; }
 .tool-card:nth-child(1) .tool-header { border-bottom-color: rgba(56,242,175,0.2); }
 .tool-card:nth-child(2) .tool-header { border-bottom-color: rgba(78,168,255,0.2); }
 .tool-card:nth-child(3) .tool-header { border-bottom-color: rgba(255,107,107,0.2); }
+
+
+/* ================================================================
+   SECTION 05 — TABLA
+   ================================================================ */
+.table-wrap { padding: 0; overflow: hidden; }
+.table-legend {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 0.85rem;
+}
+.legend-good { color: var(--primary); font-weight: 700; }
+.legend-bad { color: var(--danger); font-weight: 700; }
+
+.practices-table { width: 100%; }
+.table-head {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 2fr;
+  padding: 0.8rem 1.5rem;
+  background: rgba(0,0,0,0.2);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.table-row {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 2fr;
+  padding: 0.9rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  align-items: center;
+  transition: background 0.2s;
+}
+.table-row:hover { background: rgba(255,255,255,0.02); }
+.col-cat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.row-icon { font-size: 1rem; }
+.good-item {
+  font-size: 0.85rem;
+  color: var(--primary);
+  padding: 0.3rem 0.6rem;
+  background: rgba(56,242,175,0.07);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+.bad-item {
+  font-size: 0.85rem;
+  color: var(--danger);
+  padding: 0.3rem 0.6rem;
+  background: rgba(255,107,107,0.07);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+footer {
+  border-top: 1px solid var(--border-soft);
+  background: rgba(7, 17, 31, 0.9);
+  margin-top: 4rem;
+}
+.footer-content {
+  width: min(100% - 2rem, var(--max-width));
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.footer-logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-family: var(--font-mono);
+}
+.bracket { color: var(--text-muted); }
+.footer-sub { color: var(--text-muted); font-size: 0.88rem; }
