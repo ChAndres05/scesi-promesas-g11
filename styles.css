@@ -813,3 +813,27 @@ footer {
 }
 .bracket { color: var(--text-muted); }
 .footer-sub { color: var(--text-muted); font-size: 0.88rem; }
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding: 4rem 0 3rem; min-height: auto; }
+  .hero-visual { order: -1; }
+  .tfa-layout { grid-template-columns: 1fr; }
+  .tfa-types { grid-template-columns: 1fr 1fr; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .privacy-grid { grid-template-columns: 1fr 1fr; }
+  .password-grid { grid-template-columns: 1fr; }
+  .password-tip { grid-column: auto; }
+  .practices-table { font-size: 0.9rem; }
+}
+
+@media (max-width: 620px) {
+  .privacy-grid { grid-template-columns: 1fr; }
+  .tfa-types { grid-template-columns: 1fr; }
+  .table-head, .table-row { grid-template-columns: 1fr; gap: 0.4rem; padding: 0.8rem 1rem; }
+  .table-head { display: none; }
+  .hero-title { font-size: clamp(2rem, 10vw, 3rem); }
+  .footer-content { flex-direction: column; text-align: center; }
+}
