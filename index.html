@@ -58,5 +58,64 @@
       </div>
     </section>
 
+    <!-- CONTRASEÑAS SEGURAS -->
+    <section id="contrasenas" class="section">
+      <div class="section-header">
+        <span class="section-tag">01</span>
+        <h2>Contraseñas <span class="accent">Seguras</span></h2>
+        <p class="section-desc">Una contraseña fuerte es tu primera barrera de protección digital.</p>
+      </div>
+
+      <div class="password-grid">
+        <div class="password-rules card">
+          <h3 class="card-title"><span class="icon">🛡️</span> Reglas de Oro</h3>
+          <ul class="rule-list">
+            <li><span class="check">✔</span> Mínimo <strong>12 caracteres</strong></li>
+            <li><span class="check">✔</span> Combina <strong>mayúsculas, minúsculas, números y símbolos</strong></li>
+            <li><span class="check">✔</span> Evita datos personales (nombre, fecha de nacimiento)</li>
+            <li><span class="check">✔</span> Usa una <strong>contraseña diferente</strong> por cada cuenta</li>
+            <li><span class="check">✔</span> Cámbiala cada <strong>3-6 meses</strong></li>
+            <li><span class="x">✘</span> Nunca uses "123456", "password" o "qwerty"</li>
+          </ul>
+        </div>
+
+        <div class="password-strength card">
+          <h3 class="card-title"><span class="icon">⚡</span> Medidor de Fortaleza</h3>
+          <p class="card-sub">Prueba la seguridad de tu contraseña:</p>
+          <div class="input-wrap">
+            <input type="password" id="pwInput" placeholder="Escribe una contraseña…" autocomplete="off"/>
+            <button id="togglePw" aria-label="Mostrar/Ocultar">👁</button>
+          </div>
+          <div class="strength-bar-wrap">
+            <div class="strength-bar" id="strengthBar"></div>
+          </div>
+          <p id="strengthLabel" class="strength-label">—</p>
+          <ul id="pwCriteria" class="pw-criteria">
+            <li id="c-len">✘ Al menos 12 caracteres</li>
+            <li id="c-upper">✘ Mayúscula</li>
+            <li id="c-lower">✘ Minúscula</li>
+            <li id="c-num">✘ Número</li>
+            <li id="c-sym">✘ Símbolo (!@#$…)</li>
+          </ul>
+        </div>
+
+        <div class="password-tip card">
+          <h3 class="card-title"><span class="icon">💡</span> Tip: Frase Clave</h3>
+          <p>En lugar de una sola palabra compleja, usa una <strong>frase de contraseña</strong>:</p>
+          <div class="passphrase-demo">
+            <span class="pp-word">Mi</span>
+            <span class="pp-word">Gato</span>
+            <span class="pp-word">Come</span>
+            <span class="pp-word">3</span>
+            <span class="pp-word">Pizzas!</span>
+          </div>
+          <p class="pp-result"><code>MiGatoCome3Pizzas!</code></p>
+          <p class="pp-note">Fácil de recordar. Difícil de romper. ✓</p>
+          <button class="btn-secondary" id="generatePhrase">Generar frase aleatoria</button>
+          <p id="generatedPhrase" class="generated-phrase"></p>
+        </div>
+      </div>
+    </section>
+
   </main>
 </html>
