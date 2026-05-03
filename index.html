@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CSESI Promesas G11 | Cybersecurity Guide</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="amenazas.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet" />
 </head>
@@ -66,11 +67,144 @@
       </div>
     </section>
 
-    <section id="threats" class="section-placeholder">
-      <h2>Amenazas comunes</h2>
-      <p>
-        Conoce ataques como phishing, malware, ransomware, spyware e ingeniería social.
-      </p>
+    <section id="threats" class="threats-section">
+      <div class="section-intro">
+        <span class="section-tag">Amenazas y ataques comunes</span>
+        <h2>Amenazas y ataques comunes</h2>
+        <p>
+          Descubre las técnicas más frecuentes en ciberseguridad, aprende con ejemplos reales y conoce cómo
+          protegerte de cada amenaza.
+        </p>
+      </div>
+
+      <div class="threats-grid">
+        <article class="threat-card">
+          <div class="threat-card-top">
+            <div class="threat-icon">🦠</div>
+            <h3>Malware</h3>
+          </div>
+          <p>
+            Software malicioso diseñado para dañar, espiar o robar datos. Incluye virus, troyanos y gusanos.
+          </p>
+          <ul>
+            <li>Infecta dispositivos.</li>
+            <li>Puede robar contraseñas.</li>
+            <li>Permite acceso remoto no autorizado.</li>
+          </ul>
+          <div class="threat-example">
+            <strong>Ejemplo:</strong> un programa gratis descargado de una web insegura instala un troyano
+            que roba datos bancarios.
+          </div>
+        </article>
+
+        <article class="threat-card">
+          <div class="threat-card-top">
+            <div class="threat-icon">🎣</div>
+            <h3>Phishing</h3>
+          </div>
+          <p>
+            Ataque que usa mensajes falsos para engañar al usuario y obtener credenciales, datos personales
+            o acceso a cuentas.
+          </p>
+          <ul>
+            <li>Correos o mensajes engañosos.</li>
+            <li>Enlaces a páginas falsas.</li>
+            <li>Urgencia para que actúes rápido.</li>
+          </ul>
+          <div class="threat-example">
+            <strong>Ejemplo:</strong> recibes un correo que parece de tu banco pidiéndote actualizar tu
+            contraseña en una web falsa.
+          </div>
+        </article>
+
+        <article class="threat-card">
+          <div class="threat-card-top">
+            <div class="threat-icon">💸</div>
+            <h3>Ransomware</h3>
+          </div>
+          <p>
+            Secuestra archivos o sistemas y exige un rescate para liberarlos. Puede paralizar empresas y
+            organizaciones.
+          </p>
+          <ul>
+            <li>Cifra archivos.</li>
+            <li>Exige pago en criptomonedas.</li>
+            <li>No garantiza recuperación completa.</li>
+          </ul>
+          <div class="threat-example">
+            <strong>Ejemplo:</strong> al abrir un adjunto comprometido, tu equipo queda cifrado y aparece
+            una nota de rescate.
+          </div>
+        </article>
+
+        <article class="threat-card">
+          <div class="threat-card-top">
+            <div class="threat-icon">🕵️</div>
+            <h3>Spyware</h3>
+          </div>
+          <p>
+            Software que espía tu actividad sin permiso para robar información, historial, contraseñas o
+            datos sensibles.
+          </p>
+          <ul>
+            <li>Monitorea pulsaciones.</li>
+            <li>Registra sitios visitados.</li>
+            <li>Envía datos a terceros.</li>
+          </ul>
+          <div class="threat-example">
+            <strong>Ejemplo:</strong> una app aparentemente útil instala un spyware que captura mensajes y
+            credenciales.
+          </div>
+        </article>
+
+        <article class="threat-card">
+          <div class="threat-card-top">
+            <div class="threat-icon">🔓</div>
+            <h3>Fuerza bruta</h3>
+          </div>
+          <p>
+            Técnica que prueba muchas combinaciones de contraseñas hasta encontrar la correcta. Funciona
+            mejor cuando las claves son débiles.
+          </p>
+          <ul>
+            <li>Ataca cuentas con contraseñas simples.</li>
+            <li>Usa diccionarios automáticos.</li>
+            <li>Es común en servicios sin doble factor.</li>
+          </ul>
+          <div class="threat-example">
+            <strong>Ejemplo:</strong> un atacante prueba varias contraseñas hasta adivinar tu cuenta de
+            correo porque usas una clave común.
+          </div>
+        </article>
+      </div>
+
+      <div class="social-engineering">
+        <div class="social-header">
+          <h3>Ingeniería social</h3>
+          <p>
+            Estrategias para manipular personas, no sistemas. El objetivo es que el usuario entregue
+            información o acceso sin sospechar.
+          </p>
+        </div>
+
+        <div class="social-grid">
+          <article class="social-card">
+            <span class="social-icon">📧</span>
+            <h4>Suplantación de identidad</h4>
+            <p>Fingir ser una entidad confiable para pedir datos o permisos.</p>
+          </article>
+          <article class="social-card">
+            <span class="social-icon">📱</span>
+            <h4>Mensajes falsos</h4>
+            <p>Envían links o archivos maliciosos haciéndose pasar por servicio técnico o un colega.</p>
+          </article>
+          <article class="social-card">
+            <span class="social-icon">👥</span>
+            <h4>Urgencia falsa</h4>
+            <p>Presionan con falso apuro para que tomes decisiones sin verificación.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section id="protection" class="section-placeholder">
@@ -107,5 +241,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="amenazas.js"></script>
 </body>
 </html>
