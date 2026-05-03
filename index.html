@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>CSESI Promesas G11 | Cybersecurity Guide</title>
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="amenazas.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;800&display=swap"
+    rel="stylesheet"
+  />
 </head>
+
 <body>
+  <div class="bg-grid"></div>
+  <div class="scanline"></div>
+
   <header class="site-header">
     <nav class="navbar">
       <a href="#home" class="logo">
@@ -26,6 +36,7 @@
         <li><a href="#threats">Amenazas</a></li>
         <li><a href="#protection">Protección</a></li>
         <li><a href="#web-security">Seguridad Web</a></li>
+        <li><a href="#prevention">Prevención</a></li>
         <li><a href="#quiz">Quiz</a></li>
       </ul>
     </nav>
@@ -212,24 +223,161 @@
       <p>
         Aprende buenas prácticas para proteger cuentas, contraseñas, datos personales y dispositivos.
       </p>
-      <br/>
-      <a href="proteccion.html" class="btn btn-primary" style="margin-top:1rem;">
+
+      <br />
+
+      <a href="proteccion.html" class="btn btn-primary">
         Ver módulo completo →
       </a>
     </section>
 
     <section id="web-security" class="section-placeholder">
-      <h2>Seguridad web</h2>
+      <span class="section-tag">MÓDULO WEB</span>
+      <h2>Seguridad Web</h2>
+
       <p>
-        Descubre conceptos como HTTPS, cookies, formularios seguros y navegación responsable.
+        La seguridad web ayuda a proteger la información del usuario cuando navega,
+        inicia sesión, llena formularios o descarga contenido de internet.
       </p>
+
+      <div class="info-grid">
+        <article class="security-card">
+          <span class="security-icon">🔐</span>
+          <h3>HTTPS</h3>
+          <p>
+            Protege la información enviada entre el usuario y el sitio web mediante
+            una conexión segura.
+          </p>
+        </article>
+
+        <article class="security-card">
+          <span class="security-icon">🍪</span>
+          <h3>Cookies</h3>
+          <p>
+            Guardan datos del usuario, como sesiones o preferencias. Deben usarse
+            correctamente para evitar riesgos de privacidad.
+          </p>
+        </article>
+
+        <article class="security-card">
+          <span class="security-icon">🧾</span>
+          <h3>Formularios seguros</h3>
+          <p>
+            Ayudan a evitar el robo de datos personales mediante validaciones,
+            cifrado y buenas prácticas.
+          </p>
+        </article>
+      </div>
+
+      <div class="risk-box">
+        <h3>Riesgos comunes</h3>
+
+        <ul class="risk-list">
+          <li>Enlaces sospechosos enviados por correo, redes sociales o mensajes.</li>
+          <li>Descargas inseguras desde páginas desconocidas.</li>
+          <li>Sitios web falsos que imitan bancos, tiendas o plataformas conocidas.</li>
+          <li>Formularios que solicitan datos sensibles sin una conexión segura.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="prevention" class="section-placeholder">
+      <span class="section-tag">BUENAS PRÁCTICAS</span>
+      <h2>Prevención</h2>
+
+      <p>
+        Para navegar con mayor seguridad, es importante reconocer señales de riesgo
+        y aplicar hábitos responsables.
+      </p>
+
+      <ul class="prevention-list">
+        <li>
+          <span>✅</span>
+          No hacer clic en enlaces desconocidos o sospechosos.
+        </li>
+
+        <li>
+          <span>✅</span>
+          No descargar archivos desde páginas poco confiables.
+        </li>
+
+        <li>
+          <span>✅</span>
+          Usar sitios web con HTTPS antes de ingresar datos personales.
+        </li>
+
+        <li>
+          <span>✅</span>
+          Mantener actualizado el navegador, sistema operativo y antivirus.
+        </li>
+
+        <li>
+          <span>✅</span>
+          Verificar la dirección del sitio antes de iniciar sesión.
+        </li>
+      </ul>
     </section>
 
     <section id="quiz" class="section-placeholder">
+      <span class="section-tag">PRÁCTICA</span>
       <h2>Quiz interactivo</h2>
+
       <p>
         Pon a prueba tus conocimientos con preguntas básicas sobre ciberseguridad.
       </p>
+
+      <div class="quiz-container">
+        <article class="quiz-question" data-question="0">
+          <h3>1. ¿Qué significa HTTPS?</h3>
+
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="true">
+              Protocolo seguro
+            </button>
+
+            <button class="quiz-option" data-correct="false">
+              Un virus
+            </button>
+          </div>
+        </article>
+
+        <article class="quiz-question" data-question="1">
+          <h3>2. ¿Es seguro descargar archivos desconocidos?</h3>
+
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">
+              Sí
+            </button>
+
+            <button class="quiz-option" data-correct="true">
+              No
+            </button>
+          </div>
+        </article>
+
+        <article class="quiz-question" data-question="2">
+          <h3>3. ¿Qué debes hacer con enlaces sospechosos?</h3>
+
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="true">
+              Evitar abrirlos
+            </button>
+
+            <button class="quiz-option" data-correct="false">
+              Abrirlos sin problema
+            </button>
+          </div>
+        </article>
+
+        <div class="quiz-result">
+          <h3 id="score">Puntaje: 0/3</h3>
+          <p id="final"></p>
+
+          <button id="resetQuiz" class="btn btn-secondary" type="button">
+            Reiniciar quiz
+          </button>
+        </div>
+      </div>
     </section>
   </main>
 
